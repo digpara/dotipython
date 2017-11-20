@@ -1,0 +1,24 @@
+from IPython.terminal.prompts import Prompts, Token
+import os
+
+class MyPrompt(Prompts):
+     def in_prompt_tokens(self, cli=None):
+         #name = os.path.basename(os.getcwd())
+         name = os.getcwd()
+         if len(name) > 40:
+             name = ".../" + os.path.basename(name)
+         return [(Token, name),
+                 (Token.Prompt, '$ ')]
+
+def enable_proxy():
+    os.environ['http_proxy'] = 'http://127.0.0.1:3387'
+    os.environ['https_proxy'] = 'http://127.0.0.1:3387'
+    return
+    
+def disable_proxy():
+    del os.environ['http_proxy']
+    del os.environ['https_proxy']
+    return
+
+ip = get_ipython()
+ip.prompts = MyPrompt(ip)
