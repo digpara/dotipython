@@ -40,9 +40,9 @@ c.InteractiveShellApp.exec_lines = [
     '%env LANG=en_US.UTF-8',
     '%env EDITOR="/usr/local/bin/mate -w"',
     '%env HOMEBREW_GITHUB_API_TOKEN="d3d91b8ccfcf7f7f1678bf25b6993976cf32c47b"',
-    '%env GOPATH=$HOME/go',
+    '%env GOPATH=~/go',
     
-    '%env PATH=/Users/nebulabox/go/bin:/Users/nebulabox/Documents/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/opt/X11/bin',
+    '%env PATH=~/go/bin:~/Documents/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/opt/X11/bin',
     
     '%alias la ls -F -l -A -G',
     
