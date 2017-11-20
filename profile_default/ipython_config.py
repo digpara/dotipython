@@ -36,6 +36,12 @@ c.InteractiveShellApp.exec_lines = [
     'import shutil',
     'import pdb',
     
+    '%env LC_ALL=en_US.UTF-8',
+    '%env LANG=en_US.UTF-8',
+    '%env EDITOR="/usr/local/bin/mate -w"',
+    '%env HOMEBREW_GITHUB_API_TOKEN="d3d91b8ccfcf7f7f1678bf25b6993976cf32c47b"',
+    '%env GOPATH=$HOME/go',
+    
     '%env PATH=/Users/nebulabox/go/bin:/Users/nebulabox/Documents/Scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/opt/X11/bin',
     
     '%alias la ls -F -l -A -G',
@@ -197,6 +203,7 @@ c.InteractiveShellApp.exec_lines = [
 
 ## Set the color scheme (NoColor, Neutral, Linux, or LightBG).
 #c.InteractiveShell.colors = 'Neutral'
+c.InteractiveShell.colors = 'Linux'
 
 ## 
 #c.InteractiveShell.debug = False
@@ -287,6 +294,7 @@ c.InteractiveShellApp.exec_lines = [
 #  Control-Z/Enter in Windows). By typing 'exit' or 'quit', you can force a
 #  direct exit without any confirmation.
 #c.TerminalInteractiveShell.confirm_exit = True
+c.TerminalInteractiveShell.confirm_exit = False
 
 ## Options for displaying tab completions, 'column', 'multicolumn', and
 #  'readlinelike'. These options are for `prompt_toolkit`, see `prompt_toolkit`
@@ -295,6 +303,7 @@ c.InteractiveShellApp.exec_lines = [
 
 ## Shortcut style to use at the prompt. 'vi' or 'emacs'.
 #c.TerminalInteractiveShell.editing_mode = 'emacs'
+c.TerminalInteractiveShell.editing_mode = 'vi'
 
 ## Set the editor used by IPython (default to $EDITOR/vi/notepad).
 #c.TerminalInteractiveShell.editor = '/usr/local/bin/mate -w'
