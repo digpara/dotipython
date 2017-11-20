@@ -99,5 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
-history.sqlite
+profile_default/history.*
 profile_default/db
+profile_default/log
+profile_default/pid
+profile_default/security
+
