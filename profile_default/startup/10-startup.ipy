@@ -1,9 +1,12 @@
 from IPython.terminal.prompts import Prompts, Token
 import os
+import socket
 
 class MyPrompt(Prompts):
      def in_prompt_tokens(self, cli=None):
          #name = os.path.basename(os.getcwd())
+         hostname = socket.gethostname()
+         
          name = os.getcwd()
          if len(name) > 40:
              name = ".../" + os.path.basename(name)
