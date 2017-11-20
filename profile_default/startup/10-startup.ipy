@@ -6,11 +6,14 @@ class MyPrompt(Prompts):
      def in_prompt_tokens(self, cli=None):
          #name = os.path.basename(os.getcwd())
          hostname = socket.gethostname()
-         
+         if hostname.endswith('.local'):
+             hostname=hostname[:-6]
          name = os.getcwd()
          if len(name) > 40:
              name = ".../" + os.path.basename(name)
-         return [(Token, name),
+         return [(Token.Prompt, hostname),
+                 (Token.Prompt, '|'),
+                 (Token, name),
                  (Token.Prompt, '$ ')]
 
 def enable_proxy():
